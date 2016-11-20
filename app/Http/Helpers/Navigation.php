@@ -6,3 +6,10 @@ function isActiveRoute($route, $output = 'active')
         return $output;
     }
 }
+
+function isActivePRoute($route, $output = 'active')
+{
+    if (preg_match("/^$route/", Route::currentRouteName())) {
+        return $output;
+    }
+}

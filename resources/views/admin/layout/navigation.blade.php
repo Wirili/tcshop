@@ -18,11 +18,14 @@
                     IN+
                 </div>
             </li>
+            <li class="{{ isActivePRoute('admin') }}">
+                <a href="javascript:void(0);"><i class="fa fa-th-large"></i> <span class="nav-label">系统管理</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li class="{{ isActiveRoute('admin.admin') }}"><a href="{{route('admin.admin')}}">管理员列表</a></li>
+                </ul>
+            </li>
             <li class="{{ isActiveRoute('main') }}">
                 <a href="{{ url('/') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Main view</span></a>
-            </li>
-            <li class="{{ isActiveRoute('minor') }}">
-                <a href="{{ url('/minor') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Minor view</span> </a>
             </li>
         </ul>
 
