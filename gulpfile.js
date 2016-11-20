@@ -13,7 +13,28 @@ require('laravel-elixir-vue-2');
  |
  */
 
+// elixir(mix => {
+//     mix.sass('app.scss')
+//        .webpack('app.js');
+// });
+
+
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+    mix.sass('admin/admin.scss');
+    mix.copy('resources/assets/vendor/bootstrap/fonts', 'public/fonts');
+    mix.copy('resources/assets/vendor/font-awesome/fonts', 'public/fonts')
+    mix.styles([
+        'resources/assets/vendor/bootstrap/css/bootstrap.css',
+        'resources/assets/vendor/animate/animate.css',
+        'resources/assets/vendor/font-awesome/css/font-awesome.css',
+    ], 'public/css/vendor.css', './');
+    mix.scripts([
+        'resources/assets/vendor/jquery/jquery-2.1.1.js',
+        'resources/assets/vendor/bootstrap/js/bootstrap.js',
+        'resources/assets/vendor/metisMenu/jquery.metisMenu.js',
+        'resources/assets/vendor/slimscroll/jquery.slimscroll.min.js',
+        'resources/assets/vendor/pace/pace.min.js',
+        'resources/assets/js/admin.js'
+    ], 'public/js/admin.js', './');
+
 });
