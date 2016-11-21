@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Login</title>
+    <title>后台管理 | 登陆</title>
 
     <link rel="stylesheet" href="{{asset('css/vendor.css')}}" />
     <link rel="stylesheet" href="{{asset('css/admin.css')}}" />
