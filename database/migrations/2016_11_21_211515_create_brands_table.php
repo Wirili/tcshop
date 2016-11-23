@@ -14,7 +14,7 @@ class CreateBrandsTable extends Migration
     public function up()
     {
         Schema::create('brand', function (Blueprint $table) {
-            $table->increments('brand_id');
+            $table->smallIncrements('brand_id');
             $table->string('brand_name',60)->default('')->comment('品牌名称');
             $table->string('brand_letter',60)->default('')->comment('品牌英文名称');
             $table->string('brand_logo',255)->default('')->comment('品牌图片');
