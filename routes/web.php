@@ -20,7 +20,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('login', 'auth\LoginController@login')->name('admin.postLogin');
     Route::get('logout', 'auth\LoginController@logout')->name('admin.logout');
 
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
+    Route::get('dashboard', 'DashboardController@index')->name('admin.dashboard.index');
     Route::get('/', 'DashboardController@index');
     Route::get('admin/index', 'AdminController@index')->name('admin.admin');
+    Route::get('brand/index', 'BrandController@index')->name('admin.goods.brand.index');
+    Route::get('brand/create', 'BrandController@create')->name('admin.goods.brand.create');
+    Route::get('brand/edit/{id}', 'BrandController@edit')->name('admin.goods.brand.edit');
 });

@@ -1,5 +1,8 @@
 @if ($paginator->hasPages())
-    <ul class="pagination">
+    <ul class="pagination" style="margin:0;">
+        <li>
+            <span>共 {{$paginator->total()}} 条记录</span>
+        </li>
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
             <li class="disabled"><span>&laquo;</span></li>

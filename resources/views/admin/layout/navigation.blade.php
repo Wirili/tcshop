@@ -19,14 +19,14 @@
                     IN+
                 </div>
             </li>
-            <li class="{{ isActivePRoute('goods') }}">
+            <li class="{{ isActivePRoute('admin.goods') }}">
                 <a href="javascript:void(0);"><i class="fa fa-th-large"></i> <span class="nav-label">商品管理</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li class="{{ isActiveRoute('admin.admin') }}"><a href="{{route('admin.admin')}}">商品列表</a></li>
-                    <li class="{{ isActiveRoute('admin.admin') }}"><a href="{{route('admin.admin')}}">品牌列表</a></li>
+                    <li class="{{ isActiveRoute('admin.goods.brand.index') }}"><a href="{{route('admin.goods.brand.index')}}">品牌列表</a></li>
                 </ul>
             </li>
-            <li class="{{ isActivePRoute('admin') }}">
+            <li class="{{ isActivePRoute('admin.admin') }}">
                 <a href="javascript:void(0);"><i class="fa fa-th-large"></i> <span class="nav-label">系统管理</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li class="{{ isActiveRoute('admin.admin') }}"><a href="{{route('admin.admin')}}">管理员列表</a></li>
